@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Poster Article{% endblock %}
+
+{% block body %}
+
+  {{ include('base.html.twig') }}
+  
+    <h1 style="padding-left: 5%">Postez un article</h1>
+
+  {% include 'article/_form.html.twig' with {'editMode' : editMode} %}
+  
+  {{ include('footer.html.twig') }}
+
+
+{% endblock %}
