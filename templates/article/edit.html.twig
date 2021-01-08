@@ -4,6 +4,7 @@
 
 {% block body %}
     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <title>Blog - {{ article.titre }}</title>
         {{ include('base.html.twig') }}
     
         <h1 style="padding-left: 5%">Modifier l'article</h1>

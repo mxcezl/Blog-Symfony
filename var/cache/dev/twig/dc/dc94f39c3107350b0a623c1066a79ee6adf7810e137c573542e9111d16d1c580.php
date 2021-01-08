@@ -88,22 +88,26 @@ class __TwigTemplate_fd6422c1258e1bf389d855b474095f7ef097a41c3e0b34fc52d0be7199b
         echo "    ";
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
             // line 7
-            echo "        ";
+            echo "        <title>Blog - ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 7, $this->source); })()), "titre", [], "any", false, false, false, 7), "html", null, true);
+            echo "</title>
+        ";
+            // line 8
             echo twig_include($this->env, $context, "base.html.twig");
             echo "
     
         <h1 style=\"padding-left: 5%\">Modifier l'article</h1>
 
         ";
-            // line 11
-            $this->loadTemplate("article/_form.html.twig", "article/edit.html.twig", 11)->display(twig_array_merge($context, ["editMode" => (isset($context["editMode"]) || array_key_exists("editMode", $context) ? $context["editMode"] : (function () { throw new RuntimeError('Variable "editMode" does not exist.', 11, $this->source); })())]));
             // line 12
+            $this->loadTemplate("article/_form.html.twig", "article/edit.html.twig", 12)->display(twig_array_merge($context, ["editMode" => (isset($context["editMode"]) || array_key_exists("editMode", $context) ? $context["editMode"] : (function () { throw new RuntimeError('Variable "editMode" does not exist.', 12, $this->source); })())]));
+            // line 13
             echo "        ";
             echo twig_include($this->env, $context, "footer.html.twig");
             echo "
     ";
         } else {
-            // line 14
+            // line 15
             echo "        <script>
             window.location.replace(\"/login\");
         </script>
@@ -129,7 +133,7 @@ class __TwigTemplate_fd6422c1258e1bf389d855b474095f7ef097a41c3e0b34fc52d0be7199b
 
     public function getDebugInfo()
     {
-        return array (  107 => 14,  101 => 12,  99 => 11,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  111 => 15,  105 => 13,  103 => 12,  96 => 8,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -140,6 +144,7 @@ class __TwigTemplate_fd6422c1258e1bf389d855b474095f7ef097a41c3e0b34fc52d0be7199b
 
 {% block body %}
     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <title>Blog - {{ article.titre }}</title>
         {{ include('base.html.twig') }}
     
         <h1 style=\"padding-left: 5%\">Modifier l'article</h1>

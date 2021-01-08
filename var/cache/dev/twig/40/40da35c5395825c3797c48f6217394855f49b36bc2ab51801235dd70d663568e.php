@@ -43,10 +43,10 @@ class __TwigTemplate_8d31f6b37b7cfbf9a30944aff4dafab0641b496e48472d434a4354b4d98
 
         // line 1
         $this->displayBlock('stylesheet', $context, $blocks);
-        // line 20
+        // line 19
         echo "
 ";
-        // line 21
+        // line 20
         $this->displayBlock('body', $context, $blocks);
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -67,18 +67,16 @@ class __TwigTemplate_8d31f6b37b7cfbf9a30944aff4dafab0641b496e48472d434a4354b4d98
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheet"));
 
         // line 2
-        echo "  <title>InfoSec Blog</title>
-  <link href=\"";
-        // line 3
+        echo "  <link href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/bootstrap/css/bootstrap.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
   <link rel=\"icon\" href=\"";
-        // line 4
+        // line 3
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("favicon.ico"), "html", null, true);
         echo "\" />
   <!-- Custom fonts for this template -->
   <link href=\"";
-        // line 6
+        // line 5
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/fontawesome-free/css/all.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" type=\"text/css\">
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -86,35 +84,35 @@ class __TwigTemplate_8d31f6b37b7cfbf9a30944aff4dafab0641b496e48472d434a4354b4d98
 
   <!-- Custom styles for this template -->
   <link href=\"";
-        // line 11
+        // line 10
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/clean-blog.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
   <link rel=\"stylesheet\" type=\"text/css\" href=\"";
-        // line 12
+        // line 11
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/bootstrap/css/bootstrap.min.css"), "html", null, true);
         echo "\">
   <link rel=\"stylesheet\" type=\"text/css\" href=\"";
-        // line 13
+        // line 12
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("fonts/font-awesome-4.7.0/css/font-awesome.min.css"), "html", null, true);
         echo "\">
   <link rel=\"stylesheet\" type=\"text/css\" href=\"";
-        // line 14
+        // line 13
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/animate/animate.css"), "html", null, true);
         echo "\">
   <link rel=\"stylesheet\" type=\"text/css\" href=\"";
-        // line 15
+        // line 14
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/css-hamburgers/hamburgers.min.css"), "html", null, true);
         echo "\">
   <link rel=\"stylesheet\" type=\"text/css\" href=\"";
-        // line 16
+        // line 15
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/select2/select2.min.css"), "html", null, true);
         echo "\">
   <link rel=\"stylesheet\" type=\"text/css\" href=\"";
-        // line 17
+        // line 16
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/util.css"), "html", null, true);
         echo "\">
   <link rel=\"stylesheet\" type=\"text/css\" href=\"";
-        // line 18
+        // line 17
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/main.css"), "html", null, true);
         echo "\">
 ";
@@ -126,7 +124,7 @@ class __TwigTemplate_8d31f6b37b7cfbf9a30944aff4dafab0641b496e48472d434a4354b4d98
 
     }
 
-    // line 21
+    // line 20
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -136,12 +134,12 @@ class __TwigTemplate_8d31f6b37b7cfbf9a30944aff4dafab0641b496e48472d434a4354b4d98
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 22
+        // line 21
         echo "    <!-- Navigation -->
     <nav class=\"navbar navbar-expand-lg navbar-light fixed-top\" id=\"mainNav\">
         <div class=\"container\">
         <a class=\"navbar-brand\" href=\"";
-        // line 25
+        // line 24
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_index");
         echo "\">Mon super Blog</a>
         <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarResponsive\" aria-controls=\"navbarResponsive\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
@@ -152,40 +150,40 @@ class __TwigTemplate_8d31f6b37b7cfbf9a30944aff4dafab0641b496e48472d434a4354b4d98
             <ul class=\"navbar-nav ml-auto\">
             <li class=\"nav-item\">
                 <a class=\"nav-link\" href=\"";
-        // line 33
+        // line 32
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_index");
         echo "\">Accueil</a>
             </li>
 
             ";
-        // line 36
+        // line 35
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 37
+            // line 36
             echo "              <li class=\"nav-item\">
                   <a class=\"nav-link\" href=\"";
-            // line 38
+            // line 37
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_new");
             echo "\">Poster un article</a>
               </li>
 
               <li class=\"nav-item\">
                   <a class=\"nav-link\" href=\"";
-            // line 42
+            // line 41
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\">Déconnexion</a>
               </li>
             ";
         } else {
-            // line 45
+            // line 44
             echo "              <li class=\"nav-item\">
                   <a class=\"nav-link\" href=\"";
-            // line 46
+            // line 45
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\">Connexion</a>
               </li>
             ";
         }
-        // line 49
+        // line 48
         echo "
             </ul>
         </div>
@@ -194,7 +192,7 @@ class __TwigTemplate_8d31f6b37b7cfbf9a30944aff4dafab0641b496e48472d434a4354b4d98
 
   <!-- Page Header -->
   <header class=\"masthead\" style=\"background-image: url('";
-        // line 56
+        // line 55
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/home-bg.jpg"), "html", null, true);
         echo "')\">
     <div class=\"overlay\"></div>
@@ -206,15 +204,15 @@ class __TwigTemplate_8d31f6b37b7cfbf9a30944aff4dafab0641b496e48472d434a4354b4d98
             <span class=\"subheading\">
               Bienvenue
               ";
-        // line 65
+        // line 64
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 66
+            // line 65
             echo "                 ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 66, $this->source); })()), "user", [], "any", false, false, false, 66), "username", [], "any", false, false, false, 66), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 65, $this->source); })()), "user", [], "any", false, false, false, 65), "username", [], "any", false, false, false, 65), "html", null, true);
             echo "
               ";
         }
-        // line 68
+        // line 67
         echo "              !
             </span>
           </div>
@@ -222,7 +220,7 @@ class __TwigTemplate_8d31f6b37b7cfbf9a30944aff4dafab0641b496e48472d434a4354b4d98
       </div>
     </div>
   </header>
-    ";
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -238,13 +236,12 @@ class __TwigTemplate_8d31f6b37b7cfbf9a30944aff4dafab0641b496e48472d434a4354b4d98
 
     public function getDebugInfo()
     {
-        return array (  218 => 68,  212 => 66,  210 => 65,  198 => 56,  189 => 49,  183 => 46,  180 => 45,  174 => 42,  167 => 38,  164 => 37,  162 => 36,  156 => 33,  145 => 25,  140 => 22,  130 => 21,  118 => 18,  114 => 17,  110 => 16,  106 => 15,  102 => 14,  98 => 13,  94 => 12,  90 => 11,  82 => 6,  77 => 4,  73 => 3,  70 => 2,  60 => 1,  50 => 21,  47 => 20,  45 => 1,);
+        return array (  216 => 67,  210 => 65,  208 => 64,  196 => 55,  187 => 48,  181 => 45,  178 => 44,  172 => 41,  165 => 37,  162 => 36,  160 => 35,  154 => 32,  143 => 24,  138 => 21,  128 => 20,  116 => 17,  112 => 16,  108 => 15,  104 => 14,  100 => 13,  96 => 12,  92 => 11,  88 => 10,  80 => 5,  75 => 3,  70 => 2,  60 => 1,  50 => 20,  47 => 19,  45 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% block stylesheet %}
-  <title>InfoSec Blog</title>
   <link href=\"{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}\" rel=\"stylesheet\">
   <link rel=\"icon\" href=\"{{ asset('favicon.ico') }}\" />
   <!-- Custom fonts for this template -->
@@ -317,7 +314,7 @@ class __TwigTemplate_8d31f6b37b7cfbf9a30944aff4dafab0641b496e48472d434a4354b4d98
       </div>
     </div>
   </header>
-    {% endblock %}
+{% endblock %}
 ", "base.html.twig", "C:\\xampp\\htdocs\\blog\\templates\\base.html.twig");
     }
 }

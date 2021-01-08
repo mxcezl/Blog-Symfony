@@ -86,42 +86,68 @@ class __TwigTemplate_a32b916d7c586582fd823dc85555d790eb0dbdda3494d7d79878ef53459
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    ";
+        echo "    <title>Blog - ";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 6, $this->source); })()), "titre", [], "any", false, false, false, 6), "html", null, true);
+        echo "</title>
+    ";
+        // line 7
         $this->displayBlock('stylesheet', $context, $blocks);
-        // line 18
+        // line 19
         echo "
   <!-- Navigation -->
-  <nav class=\"navbar navbar-expand-lg navbar-light fixed-top\" id=\"mainNav\">
-    <div class=\"container\">
-      <a class=\"navbar-brand\" href=\"";
-        // line 22
+    <nav class=\"navbar navbar-expand-lg navbar-light fixed-top\" id=\"mainNav\">
+        <div class=\"container\">
+        <a class=\"navbar-brand\" href=\"";
+        // line 23
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_index");
         echo "\">Mon super Blog</a>
-      <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarResponsive\" aria-controls=\"navbarResponsive\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-        Menu
-        <i class=\"fas fa-bars\"></i>
-      </button>
-      <div class=\"collapse navbar-collapse\" id=\"navbarResponsive\">
-        <ul class=\"navbar-nav ml-auto\">
-          <li class=\"nav-item\">
-            <a class=\"nav-link\" href=\"";
-        // line 30
+        <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarResponsive\" aria-controls=\"navbarResponsive\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+            Menu
+            <i class=\"fas fa-bars\"></i>
+        </button>
+        <div class=\"collapse navbar-collapse\" id=\"navbarResponsive\">
+            <ul class=\"navbar-nav ml-auto\">
+            <li class=\"nav-item\">
+                <a class=\"nav-link\" href=\"";
+        // line 31
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_index");
         echo "\">Accueil</a>
-          </li>
-          <li class=\"nav-item\">
-            <a class=\"nav-link\" href=\"about.html\">A propos</a>
-          </li>
-          <li class=\"nav-item\">
-            <a class=\"nav-link\" href=\"";
-        // line 36
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_new");
-        echo "\">Poster un article</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+            </li>
+
+            ";
+        // line 34
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
+            // line 35
+            echo "              <li class=\"nav-item\">
+                  <a class=\"nav-link\" href=\"";
+            // line 36
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_new");
+            echo "\">Poster un article</a>
+              </li>
+
+              <li class=\"nav-item\">
+                  <a class=\"nav-link\" href=\"";
+            // line 40
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+            echo "\">Déconnexion</a>
+              </li>
+            ";
+        } else {
+            // line 43
+            echo "              <li class=\"nav-item\">
+                  <a class=\"nav-link\" href=\"";
+            // line 44
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+            echo "\">Connexion</a>
+              </li>
+            ";
+        }
+        // line 47
+        echo "
+            </ul>
+        </div>
+        </div>
+    </nav>
 
   <header class=\"masthead\">
     <div class=\"overlay\"></div>
@@ -130,25 +156,25 @@ class __TwigTemplate_a32b916d7c586582fd823dc85555d790eb0dbdda3494d7d79878ef53459
         <div class=\"col-lg-8 col-md-10 mx-auto\">
           <div class=\"post-heading\">
             <h1>";
-        // line 49
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 49, $this->source); })()), "titre", [], "any", false, false, false, 49), "html", null, true);
+        // line 59
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 59, $this->source); })()), "titre", [], "any", false, false, false, 59), "html", null, true);
         echo "</h1>
             <h2 class=\"subheading\">";
-        // line 50
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 50, $this->source); })()), "courteDescription", [], "any", false, false, false, 50), "html", null, true);
+        // line 60
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 60, $this->source); })()), "courteDescription", [], "any", false, false, false, 60), "html", null, true);
         echo "</h2>
             <span class=\"meta\">Posté par
               <a href=\"#\">";
-        // line 52
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 52, $this->source); })()), "auteur", [], "any", false, false, false, 52), "html", null, true);
+        // line 62
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 62, $this->source); })()), "auteur", [], "any", false, false, false, 62), "html", null, true);
         echo "</a>
               le ";
-        // line 53
-        ((twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 53, $this->source); })()), "date", [], "any", false, false, false, 53)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 53, $this->source); })()), "date", [], "any", false, false, false, 53), "Y-m-d H:i:s"), "html", null, true))) : (print ("")));
+        // line 63
+        ((twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 63, $this->source); })()), "date", [], "any", false, false, false, 63)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 63, $this->source); })()), "date", [], "any", false, false, false, 63), "Y-m-d H:i:s"), "html", null, true))) : (print ("")));
         echo "
               dans ";
-        // line 54
-        ((twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 54, $this->source); })()), "categorie", [], "any", false, false, false, 54)) ? (print (twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 54, $this->source); })()), "categorie", [], "any", false, false, false, 54), "getNom", [], "method", false, false, false, 54), "html", null, true))) : (print ("")));
+        // line 64
+        ((twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 64, $this->source); })()), "categorie", [], "any", false, false, false, 64)) ? (print (twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 64, $this->source); })()), "categorie", [], "any", false, false, false, 64), "getNom", [], "method", false, false, false, 64), "html", null, true))) : (print ("")));
         echo ".
             </span>
           </div>
@@ -163,28 +189,28 @@ class __TwigTemplate_a32b916d7c586582fd823dc85555d790eb0dbdda3494d7d79878ef53459
       <div class=\"row\">
         <div class=\"col-lg-8 col-md-10 mx-auto\">
             <p>";
-        // line 67
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 67, $this->source); })()), "description", [], "any", false, false, false, 67), "html", null, true);
+        // line 77
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 77, $this->source); })()), "description", [], "any", false, false, false, 77), "html", null, true);
         echo "</p>
         </div>
       </div>
     </div>
     ";
-        // line 71
+        // line 81
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 72
+            // line 82
             echo "      <center><button class=\"btn\"><a href=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 72, $this->source); })()), "id", [], "any", false, false, false, 72)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 82, $this->source); })()), "id", [], "any", false, false, false, 82)]), "html", null, true);
             echo "\">Modifier</a></button></center>
     ";
         }
-        // line 74
+        // line 84
         echo "  </article>
 
   <hr>
 
   ";
-        // line 78
+        // line 88
         echo twig_include($this->env, $context, "footer.html.twig");
         echo "
 
@@ -197,7 +223,7 @@ class __TwigTemplate_a32b916d7c586582fd823dc85555d790eb0dbdda3494d7d79878ef53459
 
     }
 
-    // line 6
+    // line 7
     public function block_stylesheet($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -207,14 +233,14 @@ class __TwigTemplate_a32b916d7c586582fd823dc85555d790eb0dbdda3494d7d79878ef53459
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheet"));
 
-        // line 7
+        // line 8
         echo "    <link href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/bootstrap/css/bootstrap.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
 
     <!-- Custom fonts for this template -->
     <link href=\"";
-        // line 10
+        // line 11
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/fontawesome-free/css/all.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" type=\"text/css\">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -222,7 +248,7 @@ class __TwigTemplate_a32b916d7c586582fd823dc85555d790eb0dbdda3494d7d79878ef53459
 
     <!-- Custom styles for this template -->
     <link href=\"";
-        // line 15
+        // line 16
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/clean-blog.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
 
@@ -247,7 +273,7 @@ class __TwigTemplate_a32b916d7c586582fd823dc85555d790eb0dbdda3494d7d79878ef53459
 
     public function getDebugInfo()
     {
-        return array (  226 => 15,  218 => 10,  211 => 7,  201 => 6,  188 => 78,  182 => 74,  176 => 72,  174 => 71,  167 => 67,  151 => 54,  147 => 53,  143 => 52,  138 => 50,  134 => 49,  118 => 36,  109 => 30,  98 => 22,  92 => 18,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  252 => 16,  244 => 11,  237 => 8,  227 => 7,  214 => 88,  208 => 84,  202 => 82,  200 => 81,  193 => 77,  177 => 64,  173 => 63,  169 => 62,  164 => 60,  160 => 59,  146 => 47,  140 => 44,  137 => 43,  131 => 40,  124 => 36,  121 => 35,  119 => 34,  113 => 31,  102 => 23,  96 => 19,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -257,6 +283,7 @@ class __TwigTemplate_a32b916d7c586582fd823dc85555d790eb0dbdda3494d7d79878ef53459
 {% block title %}Article{% endblock %}
 
   {% block body %}
+    <title>Blog - {{ article.titre }}</title>
     {% block stylesheet %}
     <link href=\"{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}\" rel=\"stylesheet\">
 
@@ -271,28 +298,37 @@ class __TwigTemplate_a32b916d7c586582fd823dc85555d790eb0dbdda3494d7d79878ef53459
     {% endblock %}
 
   <!-- Navigation -->
-  <nav class=\"navbar navbar-expand-lg navbar-light fixed-top\" id=\"mainNav\">
-    <div class=\"container\">
-      <a class=\"navbar-brand\" href=\"{{ path('article_index') }}\">Mon super Blog</a>
-      <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarResponsive\" aria-controls=\"navbarResponsive\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-        Menu
-        <i class=\"fas fa-bars\"></i>
-      </button>
-      <div class=\"collapse navbar-collapse\" id=\"navbarResponsive\">
-        <ul class=\"navbar-nav ml-auto\">
-          <li class=\"nav-item\">
-            <a class=\"nav-link\" href=\"{{ path('article_index') }}\">Accueil</a>
-          </li>
-          <li class=\"nav-item\">
-            <a class=\"nav-link\" href=\"about.html\">A propos</a>
-          </li>
-          <li class=\"nav-item\">
-            <a class=\"nav-link\" href=\"{{ path('article_new') }}\">Poster un article</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <nav class=\"navbar navbar-expand-lg navbar-light fixed-top\" id=\"mainNav\">
+        <div class=\"container\">
+        <a class=\"navbar-brand\" href=\"{{ path('article_index') }}\">Mon super Blog</a>
+        <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarResponsive\" aria-controls=\"navbarResponsive\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+            Menu
+            <i class=\"fas fa-bars\"></i>
+        </button>
+        <div class=\"collapse navbar-collapse\" id=\"navbarResponsive\">
+            <ul class=\"navbar-nav ml-auto\">
+            <li class=\"nav-item\">
+                <a class=\"nav-link\" href=\"{{ path('article_index') }}\">Accueil</a>
+            </li>
+
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+              <li class=\"nav-item\">
+                  <a class=\"nav-link\" href=\"{{ path('article_new') }}\">Poster un article</a>
+              </li>
+
+              <li class=\"nav-item\">
+                  <a class=\"nav-link\" href=\"{{ path('app_logout') }}\">Déconnexion</a>
+              </li>
+            {% else %}
+              <li class=\"nav-item\">
+                  <a class=\"nav-link\" href=\"{{ path('app_login') }}\">Connexion</a>
+              </li>
+            {% endif %}
+
+            </ul>
+        </div>
+        </div>
+    </nav>
 
   <header class=\"masthead\">
     <div class=\"overlay\"></div>
