@@ -460,6 +460,15 @@ private static $installed = array (
       ),
       'reference' => '4c41ad68924fd8f9e55e1cd77fd6bc28daa3fe89',
     ),
+    'symfony/deprecation-contracts' => 
+    array (
+      'pretty_version' => 'v2.2.0',
+      'version' => '2.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5fa56b4074d1ae755beb55617ddafe6f5d78f665',
+    ),
     'symfony/doctrine-bridge' => 
     array (
       'pretty_version' => 'v4.4.16',
@@ -1017,6 +1026,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '543cb4dbd45ed803f08a9a65f27fb149b5dd20c2',
+    ),
+    'symfonycasts/verify-email-bundle' => 
+    array (
+      'pretty_version' => 'v1.1.1',
+      'version' => '1.1.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '56fc933ce984c005988a4a72e1aa00731e0884e0',
     ),
     'twig/extra-bundle' => 
     array (

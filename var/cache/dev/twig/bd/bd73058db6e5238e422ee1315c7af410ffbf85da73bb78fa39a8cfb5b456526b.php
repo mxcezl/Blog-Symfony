@@ -68,7 +68,7 @@ class __TwigTemplate_544af42b52645355c2150eb538075925904da676531f4e62be72c50de12
         <div class=\"col-lg-8 col-md-10 mx-auto\">
           <ul class=\"list-inline text-center\">
             <li class=\"list-inline-item\">
-              <a href=\"#\">
+              <a href=\"https://github.com/mxcezl/Blog-Symfony\">
                 <span class=\"fa-stack fa-lg\">
                   <i class=\"fas fa-circle fa-stack-2x\"></i>
                   <i class=\"fab fa-github fa-stack-1x fa-inverse\"></i>
@@ -76,7 +76,7 @@ class __TwigTemplate_544af42b52645355c2150eb538075925904da676531f4e62be72c50de12
               </a>
             </li>
             <li class=\"list-inline-item\">
-              <a href=\"#\">
+              <a href=\"https://www.linkedin.com/in/maxence-zol/\">
                 <span class=\"fa-stack fa-lg\">
                   <i class=\"fas fa-circle fa-stack-2x\"></i>
                   <i class=\"fab fa-linkedin fa-stack-1x fa-inverse\"></i>
@@ -84,7 +84,7 @@ class __TwigTemplate_544af42b52645355c2150eb538075925904da676531f4e62be72c50de12
               </a>
             </li>
             <li class=\"list-inline-item\">
-              <a href=\"#\">
+              <a href=\"/\">
                 <span class=\"fa-stack fa-lg\">
                   <i class=\"fas fa-circle fa-stack-2x\"></i>
                   <i class=\"fa fa-globe fa-stack-1x fa-inverse\"></i>
@@ -162,7 +162,7 @@ class __TwigTemplate_544af42b52645355c2150eb538075925904da676531f4e62be72c50de12
         <div class=\"col-lg-8 col-md-10 mx-auto\">
           <ul class=\"list-inline text-center\">
             <li class=\"list-inline-item\">
-              <a href=\"#\">
+              <a href=\"https://github.com/mxcezl/Blog-Symfony\">
                 <span class=\"fa-stack fa-lg\">
                   <i class=\"fas fa-circle fa-stack-2x\"></i>
                   <i class=\"fab fa-github fa-stack-1x fa-inverse\"></i>
@@ -170,7 +170,7 @@ class __TwigTemplate_544af42b52645355c2150eb538075925904da676531f4e62be72c50de12
               </a>
             </li>
             <li class=\"list-inline-item\">
-              <a href=\"#\">
+              <a href=\"https://www.linkedin.com/in/maxence-zol/\">
                 <span class=\"fa-stack fa-lg\">
                   <i class=\"fas fa-circle fa-stack-2x\"></i>
                   <i class=\"fab fa-linkedin fa-stack-1x fa-inverse\"></i>
@@ -178,7 +178,7 @@ class __TwigTemplate_544af42b52645355c2150eb538075925904da676531f4e62be72c50de12
               </a>
             </li>
             <li class=\"list-inline-item\">
-              <a href=\"#\">
+              <a href=\"/\">
                 <span class=\"fa-stack fa-lg\">
                   <i class=\"fas fa-circle fa-stack-2x\"></i>
                   <i class=\"fa fa-globe fa-stack-1x fa-inverse\"></i>

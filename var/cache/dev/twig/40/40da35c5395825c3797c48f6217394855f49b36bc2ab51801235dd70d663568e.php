@@ -27,8 +27,8 @@ class __TwigTemplate_8d31f6b37b7cfbf9a30944aff4dafab0641b496e48472d434a4354b4d98
         $this->parent = false;
 
         $this->blocks = [
-            'body' => [$this, 'block_body'],
             'stylesheet' => [$this, 'block_stylesheet'],
+            'body' => [$this, 'block_body'],
         ];
     }
 
@@ -42,13 +42,11 @@ class __TwigTemplate_8d31f6b37b7cfbf9a30944aff4dafab0641b496e48472d434a4354b4d98
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "base.html.twig"));
 
         // line 1
-        echo "<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset=\"UTF-8\">
-    </head>
-    ";
-        // line 6
+        $this->displayBlock('stylesheet', $context, $blocks);
+        // line 20
+        echo "
+";
+        // line 21
         $this->displayBlock('body', $context, $blocks);
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -58,6 +56,77 @@ class __TwigTemplate_8d31f6b37b7cfbf9a30944aff4dafab0641b496e48472d434a4354b4d98
 
     }
 
+    // line 1
+    public function block_stylesheet($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheet"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheet"));
+
+        // line 2
+        echo "  <title>InfoSec Blog</title>
+  <link href=\"";
+        // line 3
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/bootstrap/css/bootstrap.min.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+  <link rel=\"icon\" href=\"";
+        // line 4
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("favicon.ico"), "html", null, true);
+        echo "\" />
+  <!-- Custom fonts for this template -->
+  <link href=\"";
+        // line 6
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/fontawesome-free/css/all.min.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\" type=\"text/css\">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href=\"";
+        // line 11
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/clean-blog.min.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+  <link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 12
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/bootstrap/css/bootstrap.min.css"), "html", null, true);
+        echo "\">
+  <link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 13
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("fonts/font-awesome-4.7.0/css/font-awesome.min.css"), "html", null, true);
+        echo "\">
+  <link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 14
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/animate/animate.css"), "html", null, true);
+        echo "\">
+  <link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 15
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/css-hamburgers/hamburgers.min.css"), "html", null, true);
+        echo "\">
+  <link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 16
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/select2/select2.min.css"), "html", null, true);
+        echo "\">
+  <link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 17
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/util.css"), "html", null, true);
+        echo "\">
+  <link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 18
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/main.css"), "html", null, true);
+        echo "\">
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 21
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -67,18 +136,12 @@ class __TwigTemplate_8d31f6b37b7cfbf9a30944aff4dafab0641b496e48472d434a4354b4d98
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 7
-        echo "
-        ";
-        // line 8
-        $this->displayBlock('stylesheet', $context, $blocks);
-        // line 19
-        echo "
-    <!-- Navigation -->
+        // line 22
+        echo "    <!-- Navigation -->
     <nav class=\"navbar navbar-expand-lg navbar-light fixed-top\" id=\"mainNav\">
         <div class=\"container\">
         <a class=\"navbar-brand\" href=\"";
-        // line 23
+        // line 25
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_index");
         echo "\">Mon super Blog</a>
         <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarResponsive\" aria-controls=\"navbarResponsive\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
@@ -89,19 +152,41 @@ class __TwigTemplate_8d31f6b37b7cfbf9a30944aff4dafab0641b496e48472d434a4354b4d98
             <ul class=\"navbar-nav ml-auto\">
             <li class=\"nav-item\">
                 <a class=\"nav-link\" href=\"";
-        // line 31
+        // line 33
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_index");
         echo "\">Accueil</a>
             </li>
-            <li class=\"nav-item\">
-                <a class=\"nav-link\" href=\"about.html\">A propos</a>
-            </li>
-            <li class=\"nav-item\">
-                <a class=\"nav-link\" href=\"";
-        // line 37
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_new");
-        echo "\">Poster un article</a>
-            </li>
+
+            ";
+        // line 36
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
+            // line 37
+            echo "              <li class=\"nav-item\">
+                  <a class=\"nav-link\" href=\"";
+            // line 38
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_new");
+            echo "\">Poster un article</a>
+              </li>
+
+              <li class=\"nav-item\">
+                  <a class=\"nav-link\" href=\"";
+            // line 42
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+            echo "\">Déconnexion</a>
+              </li>
+            ";
+        } else {
+            // line 45
+            echo "              <li class=\"nav-item\">
+                  <a class=\"nav-link\" href=\"";
+            // line 46
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+            echo "\">Connexion</a>
+              </li>
+            ";
+        }
+        // line 49
+        echo "
             </ul>
         </div>
         </div>
@@ -109,7 +194,7 @@ class __TwigTemplate_8d31f6b37b7cfbf9a30944aff4dafab0641b496e48472d434a4354b4d98
 
   <!-- Page Header -->
   <header class=\"masthead\" style=\"background-image: url('";
-        // line 45
+        // line 56
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/home-bg.jpg"), "html", null, true);
         echo "')\">
     <div class=\"overlay\"></div>
@@ -117,51 +202,27 @@ class __TwigTemplate_8d31f6b37b7cfbf9a30944aff4dafab0641b496e48472d434a4354b4d98
       <div class=\"row\">
         <div class=\"col-lg-8 col-md-10 mx-auto\">
           <div class=\"site-heading\">
-            <h1>Max Blog</h1>
-            <span class=\"subheading\">Le Blog le plus consulté de France !</span>
+            <h1>InfoSec Blog</h1>
+            <span class=\"subheading\">
+              Bienvenue
+              ";
+        // line 65
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
+            // line 66
+            echo "                 ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 66, $this->source); })()), "user", [], "any", false, false, false, 66), "username", [], "any", false, false, false, 66), "html", null, true);
+            echo "
+              ";
+        }
+        // line 68
+        echo "              !
+            </span>
           </div>
         </div>
       </div>
     </div>
   </header>
     ";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-        
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
-
-    }
-
-    // line 8
-    public function block_stylesheet($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheet"));
-
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheet"));
-
-        // line 9
-        echo "        <link href=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/bootstrap/css/bootstrap.min.css"), "html", null, true);
-        echo "\" rel=\"stylesheet\">
-
-        <!-- Custom fonts for this template -->
-        <link href=\"";
-        // line 12
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/fontawesome-free/css/all.min.css"), "html", null, true);
-        echo "\" rel=\"stylesheet\" type=\"text/css\">
-        <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-
-        <!-- Custom styles for this template -->
-        <link href=\"";
-        // line 17
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/clean-blog.min.css"), "html", null, true);
-        echo "\" rel=\"stylesheet\">
-        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -177,30 +238,32 @@ class __TwigTemplate_8d31f6b37b7cfbf9a30944aff4dafab0641b496e48472d434a4354b4d98
 
     public function getDebugInfo()
     {
-        return array (  162 => 17,  154 => 12,  147 => 9,  137 => 8,  113 => 45,  102 => 37,  93 => 31,  82 => 23,  76 => 19,  74 => 8,  71 => 7,  52 => 6,  45 => 1,);
+        return array (  218 => 68,  212 => 66,  210 => 65,  198 => 56,  189 => 49,  183 => 46,  180 => 45,  174 => 42,  167 => 38,  164 => 37,  162 => 36,  156 => 33,  145 => 25,  140 => 22,  130 => 21,  118 => 18,  114 => 17,  110 => 16,  106 => 15,  102 => 14,  98 => 13,  94 => 12,  90 => 11,  82 => 6,  77 => 4,  73 => 3,  70 => 2,  60 => 1,  50 => 21,  47 => 20,  45 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset=\"UTF-8\">
-    </head>
-    {% block body %}
+        return new Source("{% block stylesheet %}
+  <title>InfoSec Blog</title>
+  <link href=\"{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}\" rel=\"stylesheet\">
+  <link rel=\"icon\" href=\"{{ asset('favicon.ico') }}\" />
+  <!-- Custom fonts for this template -->
+  <link href=\"{{ asset('vendor/fontawesome-free/css/all.min.css') }}\" rel=\"stylesheet\" type=\"text/css\">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-        {% block stylesheet %}
-        <link href=\"{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}\" rel=\"stylesheet\">
+  <!-- Custom styles for this template -->
+  <link href=\"{{ asset('css/clean-blog.min.css') }}\" rel=\"stylesheet\">
+  <link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}\">
+  <link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}\">
+  <link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('vendor/animate/animate.css') }}\">
+  <link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('vendor/css-hamburgers/hamburgers.min.css') }}\">
+  <link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('vendor/select2/select2.min.css') }}\">
+  <link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('css/util.css') }}\">
+  <link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('css/main.css') }}\">
+{% endblock %}
 
-        <!-- Custom fonts for this template -->
-        <link href=\"{{ asset('vendor/fontawesome-free/css/all.min.css') }}\" rel=\"stylesheet\" type=\"text/css\">
-        <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-
-        <!-- Custom styles for this template -->
-        <link href=\"{{ asset('css/clean-blog.min.css') }}\" rel=\"stylesheet\">
-        {% endblock %}
-
+{% block body %}
     <!-- Navigation -->
     <nav class=\"navbar navbar-expand-lg navbar-light fixed-top\" id=\"mainNav\">
         <div class=\"container\">
@@ -214,12 +277,21 @@ class __TwigTemplate_8d31f6b37b7cfbf9a30944aff4dafab0641b496e48472d434a4354b4d98
             <li class=\"nav-item\">
                 <a class=\"nav-link\" href=\"{{ path('article_index') }}\">Accueil</a>
             </li>
-            <li class=\"nav-item\">
-                <a class=\"nav-link\" href=\"about.html\">A propos</a>
-            </li>
-            <li class=\"nav-item\">
-                <a class=\"nav-link\" href=\"{{ path('article_new') }}\">Poster un article</a>
-            </li>
+
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+              <li class=\"nav-item\">
+                  <a class=\"nav-link\" href=\"{{ path('article_new') }}\">Poster un article</a>
+              </li>
+
+              <li class=\"nav-item\">
+                  <a class=\"nav-link\" href=\"{{ path('app_logout') }}\">Déconnexion</a>
+              </li>
+            {% else %}
+              <li class=\"nav-item\">
+                  <a class=\"nav-link\" href=\"{{ path('app_login') }}\">Connexion</a>
+              </li>
+            {% endif %}
+
             </ul>
         </div>
         </div>
@@ -232,8 +304,14 @@ class __TwigTemplate_8d31f6b37b7cfbf9a30944aff4dafab0641b496e48472d434a4354b4d98
       <div class=\"row\">
         <div class=\"col-lg-8 col-md-10 mx-auto\">
           <div class=\"site-heading\">
-            <h1>Max Blog</h1>
-            <span class=\"subheading\">Le Blog le plus consulté de France !</span>
+            <h1>InfoSec Blog</h1>
+            <span class=\"subheading\">
+              Bienvenue
+              {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                 {{ app.user.username }}
+              {% endif %}
+              !
+            </span>
           </div>
         </div>
       </div>

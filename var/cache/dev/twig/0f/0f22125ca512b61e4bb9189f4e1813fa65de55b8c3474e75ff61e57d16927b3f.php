@@ -42,7 +42,7 @@ class __TwigTemplate_c384dbeea6dace4aad3b75d17883fbc7583e18f6c399d408465b2495f97
         // line 1
         echo "<form method=\"post\" action=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 1, $this->source); })()), "id", [], "any", false, false, false, 1)]), "html", null, true);
-        echo "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+        echo "\" onsubmit=\"return confirm('Voulez vous vraiment supprimer cet article ?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"";
         // line 3
@@ -76,7 +76,7 @@ class __TwigTemplate_c384dbeea6dace4aad3b75d17883fbc7583e18f6c399d408465b2495f97
 
     public function getSourceContext()
     {
-        return new Source("<form method=\"post\" action=\"{{ path('article_delete', {'id': article.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+        return new Source("<form method=\"post\" action=\"{{ path('article_delete', {'id': article.id}) }}\" onsubmit=\"return confirm('Voulez vous vraiment supprimer cet article ?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ article.id) }}\">
     <button class=\"btn\">Delete</button>

@@ -169,16 +169,22 @@ class __TwigTemplate_a32b916d7c586582fd823dc85555d790eb0dbdda3494d7d79878ef53459
         </div>
       </div>
     </div>
-    <!-- <button class=\"btn\"><a href=\"";
+    ";
         // line 71
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 71, $this->source); })()), "id", [], "any", false, false, false, 71)]), "html", null, true);
-        echo "\">Modifier</a></button> -->
-  </article>
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
+            // line 72
+            echo "      <center><button class=\"btn\"><a href=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 72, $this->source); })()), "id", [], "any", false, false, false, 72)]), "html", null, true);
+            echo "\">Modifier</a></button></center>
+    ";
+        }
+        // line 74
+        echo "  </article>
 
   <hr>
 
   ";
-        // line 76
+        // line 78
         echo twig_include($this->env, $context, "footer.html.twig");
         echo "
 
@@ -241,7 +247,7 @@ class __TwigTemplate_a32b916d7c586582fd823dc85555d790eb0dbdda3494d7d79878ef53459
 
     public function getDebugInfo()
     {
-        return array (  220 => 15,  212 => 10,  205 => 7,  195 => 6,  182 => 76,  174 => 71,  167 => 67,  151 => 54,  147 => 53,  143 => 52,  138 => 50,  134 => 49,  118 => 36,  109 => 30,  98 => 22,  92 => 18,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  226 => 15,  218 => 10,  211 => 7,  201 => 6,  188 => 78,  182 => 74,  176 => 72,  174 => 71,  167 => 67,  151 => 54,  147 => 53,  143 => 52,  138 => 50,  134 => 49,  118 => 36,  109 => 30,  98 => 22,  92 => 18,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -316,7 +322,9 @@ class __TwigTemplate_a32b916d7c586582fd823dc85555d790eb0dbdda3494d7d79878ef53459
         </div>
       </div>
     </div>
-    <!-- <button class=\"btn\"><a href=\"{{ path('article_edit', {id : article.id}) }}\">Modifier</a></button> -->
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+      <center><button class=\"btn\"><a href=\"{{ path('article_edit', {id : article.id}) }}\">Modifier</a></button></center>
+    {% endif %}
   </article>
 
   <hr>

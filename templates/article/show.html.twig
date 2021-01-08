@@ -68,7 +68,9 @@
         </div>
       </div>
     </div>
-    <!-- <button class="btn"><a href="{{ path('article_edit', {id : article.id}) }}">Modifier</a></button> -->
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+      <center><button class="btn"><a href="{{ path('article_edit', {id : article.id}) }}">Modifier</a></button></center>
+    {% endif %}
   </article>
 
   <hr>

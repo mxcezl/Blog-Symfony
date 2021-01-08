@@ -9,7 +9,7 @@
   <!-- Main Content -->
   <div class="container">
     <hr>
-    {% for article in articles %}
+    {% for article in articles|reverse %}
         <div class="post-preview">
           <a href="{{ path('article_show', {'id': article.id}) }}">
             <h2 class="post-title">
@@ -20,9 +20,9 @@
             </h3>
           </a>
           <p class="post-meta">Posté par
-            <a href="#">{{ article.auteur }}</a>
+            <span style="color: black">{{ article.auteur }}</span>
             le {{ article.date ? article.date|date('Y-m-d H:i:s') : '' }} 
-             dans {{ article.categorie ? article.categorie.getNom() : ''}}.</p>
+             dans <span style="color: black">{{ article.categorie ? article.categorie.getNom() : ''}}</span>.</p>
         </div>
         <hr>
       {% else %}

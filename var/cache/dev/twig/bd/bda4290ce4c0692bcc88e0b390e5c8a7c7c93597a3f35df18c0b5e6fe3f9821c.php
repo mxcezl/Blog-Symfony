@@ -85,26 +85,28 @@ class __TwigTemplate_65acb63abc37520c00aed3b09c32c8a004683c8a997a34746d135481a5f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "
-  ";
-        // line 7
-        echo twig_include($this->env, $context, "base.html.twig");
-        echo "
-  
+        echo "  ";
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
+            // line 7
+            echo "    ";
+            echo twig_include($this->env, $context, "base.html.twig");
+            echo "
     <h1 style=\"padding-left: 5%\">Postez un article</h1>
-
+    ";
+            // line 9
+            $this->loadTemplate("article/_form.html.twig", "article/new.html.twig", 9)->display(twig_array_merge($context, ["editMode" => (isset($context["editMode"]) || array_key_exists("editMode", $context) ? $context["editMode"] : (function () { throw new RuntimeError('Variable "editMode" does not exist.', 9, $this->source); })())]));
+            // line 10
+            echo "    ";
+            echo twig_include($this->env, $context, "footer.html.twig");
+            echo "
   ";
-        // line 11
-        $this->loadTemplate("article/_form.html.twig", "article/new.html.twig", 11)->display(twig_array_merge($context, ["editMode" => (isset($context["editMode"]) || array_key_exists("editMode", $context) ? $context["editMode"] : (function () { throw new RuntimeError('Variable "editMode" does not exist.', 11, $this->source); })())]));
-        // line 12
-        echo "  
+        } else {
+            // line 12
+            echo "    <script>
+      window.location.replace(\"/login\");
+      </script>
   ";
-        // line 13
-        echo twig_include($this->env, $context, "footer.html.twig");
-        echo "
-
-
-";
+        }
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -125,7 +127,7 @@ class __TwigTemplate_65acb63abc37520c00aed3b09c32c8a004683c8a997a34746d135481a5f
 
     public function getDebugInfo()
     {
-        return array (  103 => 13,  100 => 12,  98 => 11,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  105 => 12,  99 => 10,  97 => 9,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -135,16 +137,16 @@ class __TwigTemplate_65acb63abc37520c00aed3b09c32c8a004683c8a997a34746d135481a5f
 {% block title %}Poster Article{% endblock %}
 
 {% block body %}
-
-  {{ include('base.html.twig') }}
-  
+  {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    {{ include('base.html.twig') }}
     <h1 style=\"padding-left: 5%\">Postez un article</h1>
-
-  {% include 'article/_form.html.twig' with {'editMode' : editMode} %}
-  
-  {{ include('footer.html.twig') }}
-
-
+    {% include 'article/_form.html.twig' with {'editMode' : editMode} %}
+    {{ include('footer.html.twig') }}
+  {% else %}
+    <script>
+      window.location.replace(\"/login\");
+      </script>
+  {% endif %}
 {% endblock %}
 ", "article/new.html.twig", "C:\\xampp\\htdocs\\blog\\templates\\article\\new.html.twig");
     }

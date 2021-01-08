@@ -1,22 +1,24 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-    </head>
-    {% block body %}
+{% block stylesheet %}
+  <title>InfoSec Blog</title>
+  <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link rel="icon" href="{{ asset('favicon.ico') }}" />
+  <!-- Custom fonts for this template -->
+  <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-        {% block stylesheet %}
-        <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{{ asset('css/clean-blog.min.css') }}" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('vendor/animate/animate.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('vendor/css-hamburgers/hamburgers.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('vendor/select2/select2.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/util.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
+{% endblock %}
 
-        <!-- Custom fonts for this template -->
-        <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
-        <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-
-        <!-- Custom styles for this template -->
-        <link href="{{ asset('css/clean-blog.min.css') }}" rel="stylesheet">
-        {% endblock %}
-
+{% block body %}
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
@@ -30,12 +32,21 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('article_index') }}">Accueil</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="about.html">A propos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ path('article_new') }}">Poster un article</a>
-            </li>
+
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ path('article_new') }}">Poster un article</a>
+              </li>
+
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ path('app_logout') }}">Déconnexion</a>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
+              </li>
+            {% endif %}
+
             </ul>
         </div>
         </div>
@@ -48,8 +59,14 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1>Max Blog</h1>
-            <span class="subheading">Le Blog le plus consulté de France !</span>
+            <h1>InfoSec Blog</h1>
+            <span class="subheading">
+              Bienvenue
+              {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                 {{ app.user.username }}
+              {% endif %}
+              !
+            </span>
           </div>
         </div>
       </div>

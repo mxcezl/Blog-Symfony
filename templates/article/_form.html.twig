@@ -3,18 +3,16 @@
     {{ form_start(form) }}
         {{ form_row(form.titre, {'attr' : {'placeholder': "Titre de l'article"}}) }}
         {{ form_row(form.courte_description, {'attr' : {'placeholder': "Petite description de l'article"}}) }}
-        {{ form_row(form.description, {'attr' : {'placeholder': "Votre article"}}) }}
+        {{ form_row(form.description, {'label': 'Article', 'attr' : {'placeholder': "Votre article"}}) }}
         {{ form_row(form.categorie, {'attr' : {'placeholder': "Catégorie"}}) }}
-        <button type="submit" class="btn">
-            {% if editMode %}
-                Enregistrer les modifications
-            {% else %}
-                Créer l'article
-            {% endif %}
-        </button>
-        {% if editMode %}
-            <button><a href="{{ path('article_delete', {'id': article.id}) }}">Supprimer l'article</a></button>
-        {% endif %}
-        
+        <center>
+            <button type="submit" class="btn">
+                {% if editMode %}
+                    Enregistrer les modifications
+                {% else %}
+                    Créer l'article
+                {% endif %}
+            </button>
+        </center>
     {{ form_end(form) }}
 </div>

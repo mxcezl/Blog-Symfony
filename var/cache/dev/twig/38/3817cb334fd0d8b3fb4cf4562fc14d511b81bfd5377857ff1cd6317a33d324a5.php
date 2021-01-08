@@ -57,40 +57,31 @@ class __TwigTemplate_1cde00e063bd486acfa8b242f19861c1baaf4893a66c1a46fa22f0901b0
         echo "
         ";
         // line 6
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 6, $this->source); })()), "description", [], "any", false, false, false, 6), 'row', ["attr" => ["placeholder" => "Votre article"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 6, $this->source); })()), "description", [], "any", false, false, false, 6), 'row', ["label" => "Article", "attr" => ["placeholder" => "Votre article"]]);
         echo "
         ";
         // line 7
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 7, $this->source); })()), "categorie", [], "any", false, false, false, 7), 'row', ["attr" => ["placeholder" => "Catégorie"]]);
         echo "
-        <button type=\"submit\" class=\"btn\">
-            ";
-        // line 9
-        if ((isset($context["editMode"]) || array_key_exists("editMode", $context) ? $context["editMode"] : (function () { throw new RuntimeError('Variable "editMode" does not exist.', 9, $this->source); })())) {
-            // line 10
-            echo "                Enregistrer les modifications
-            ";
+        <center>
+            <button type=\"submit\" class=\"btn\">
+                ";
+        // line 10
+        if ((isset($context["editMode"]) || array_key_exists("editMode", $context) ? $context["editMode"] : (function () { throw new RuntimeError('Variable "editMode" does not exist.', 10, $this->source); })())) {
+            // line 11
+            echo "                    Enregistrer les modifications
+                ";
         } else {
-            // line 12
-            echo "                Créer l'article
-            ";
+            // line 13
+            echo "                    Créer l'article
+                ";
         }
-        // line 14
-        echo "        </button>
-        ";
         // line 15
-        if ((isset($context["editMode"]) || array_key_exists("editMode", $context) ? $context["editMode"] : (function () { throw new RuntimeError('Variable "editMode" does not exist.', 15, $this->source); })())) {
-            // line 16
-            echo "            <button><a href=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 16, $this->source); })()), "id", [], "any", false, false, false, 16)]), "html", null, true);
-            echo "\">Supprimer l'article</a></button>
-        ";
-        }
-        // line 18
-        echo "        
+        echo "            </button>
+        </center>
     ";
-        // line 19
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 19, $this->source); })()), 'form_end');
+        // line 17
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 17, $this->source); })()), 'form_end');
         echo "
 </div>
 ";
@@ -114,7 +105,7 @@ class __TwigTemplate_1cde00e063bd486acfa8b242f19861c1baaf4893a66c1a46fa22f0901b0
 
     public function getDebugInfo()
     {
-        return array (  93 => 19,  90 => 18,  84 => 16,  82 => 15,  79 => 14,  75 => 12,  71 => 10,  69 => 9,  64 => 7,  60 => 6,  56 => 5,  52 => 4,  48 => 3,  45 => 2,  43 => 1,);
+        return array (  84 => 17,  80 => 15,  76 => 13,  72 => 11,  70 => 10,  64 => 7,  60 => 6,  56 => 5,  52 => 4,  48 => 3,  45 => 2,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -124,19 +115,17 @@ class __TwigTemplate_1cde00e063bd486acfa8b242f19861c1baaf4893a66c1a46fa22f0901b0
     {{ form_start(form) }}
         {{ form_row(form.titre, {'attr' : {'placeholder': \"Titre de l'article\"}}) }}
         {{ form_row(form.courte_description, {'attr' : {'placeholder': \"Petite description de l'article\"}}) }}
-        {{ form_row(form.description, {'attr' : {'placeholder': \"Votre article\"}}) }}
+        {{ form_row(form.description, {'label': 'Article', 'attr' : {'placeholder': \"Votre article\"}}) }}
         {{ form_row(form.categorie, {'attr' : {'placeholder': \"Catégorie\"}}) }}
-        <button type=\"submit\" class=\"btn\">
-            {% if editMode %}
-                Enregistrer les modifications
-            {% else %}
-                Créer l'article
-            {% endif %}
-        </button>
-        {% if editMode %}
-            <button><a href=\"{{ path('article_delete', {'id': article.id}) }}\">Supprimer l'article</a></button>
-        {% endif %}
-        
+        <center>
+            <button type=\"submit\" class=\"btn\">
+                {% if editMode %}
+                    Enregistrer les modifications
+                {% else %}
+                    Créer l'article
+                {% endif %}
+            </button>
+        </center>
     {{ form_end(form) }}
 </div>
 ", "article/_form.html.twig", "C:\\xampp\\htdocs\\blog\\templates\\article\\_form.html.twig");

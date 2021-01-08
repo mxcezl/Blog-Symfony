@@ -98,7 +98,7 @@ class __TwigTemplate_e2c848e321c301eba313dd873bb67540422f2d7348ae6a90c59c5712e88
     ";
         // line 12
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 12, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable(twig_reverse_filter($this->env, (isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 12, $this->source); })())));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
             // line 13
@@ -121,18 +121,18 @@ class __TwigTemplate_e2c848e321c301eba313dd873bb67540422f2d7348ae6a90c59c5712e88
             </h3>
           </a>
           <p class=\"post-meta\">Posté par
-            <a href=\"#\">";
+            <span style=\"color: black\">";
             // line 23
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "auteur", [], "any", false, false, false, 23), "html", null, true);
-            echo "</a>
+            echo "</span>
             le ";
             // line 24
             ((twig_get_attribute($this->env, $this->source, $context["article"], "date", [], "any", false, false, false, 24)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "date", [], "any", false, false, false, 24), "Y-m-d H:i:s"), "html", null, true))) : (print ("")));
             echo " 
-             dans ";
+             dans <span style=\"color: black\">";
             // line 25
             ((twig_get_attribute($this->env, $this->source, $context["article"], "categorie", [], "any", false, false, false, 25)) ? (print (twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["article"], "categorie", [], "any", false, false, false, 25), "getNom", [], "method", false, false, false, 25), "html", null, true))) : (print ("")));
-            echo ".</p>
+            echo "</span>.</p>
         </div>
         <hr>
       ";
@@ -237,7 +237,7 @@ class __TwigTemplate_e2c848e321c301eba313dd873bb67540422f2d7348ae6a90c59c5712e88
   <!-- Main Content -->
   <div class=\"container\">
     <hr>
-    {% for article in articles %}
+    {% for article in articles|reverse %}
         <div class=\"post-preview\">
           <a href=\"{{ path('article_show', {'id': article.id}) }}\">
             <h2 class=\"post-title\">
@@ -248,9 +248,9 @@ class __TwigTemplate_e2c848e321c301eba313dd873bb67540422f2d7348ae6a90c59c5712e88
             </h3>
           </a>
           <p class=\"post-meta\">Posté par
-            <a href=\"#\">{{ article.auteur }}</a>
+            <span style=\"color: black\">{{ article.auteur }}</span>
             le {{ article.date ? article.date|date('Y-m-d H:i:s') : '' }} 
-             dans {{ article.categorie ? article.categorie.getNom() : ''}}.</p>
+             dans <span style=\"color: black\">{{ article.categorie ? article.categorie.getNom() : ''}}</span>.</p>
         </div>
         <hr>
       {% else %}

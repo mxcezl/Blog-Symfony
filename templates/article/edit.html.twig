@@ -3,11 +3,16 @@
 {% block title %}Modifier Article{% endblock %}
 
 {% block body %}
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        {{ include('base.html.twig') }}
+    
+        <h1 style="padding-left: 5%">Modifier l'article</h1>
 
-    {{ include('base.html.twig') }}
-  
-    <h1 style="padding-left: 5%">Modifier l'article</h1>
-
-    {% include 'article/_form.html.twig' with {'editMode' : editMode} %}
-    {{ include('footer.html.twig') }}
+        {% include 'article/_form.html.twig' with {'editMode' : editMode} %}
+        {{ include('footer.html.twig') }}
+    {% else %}
+        <script>
+            window.location.replace("/login");
+        </script>
+    {% endif %}
 {% endblock %}
