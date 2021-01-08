@@ -4,6 +4,10 @@ Auteur : Maxence Zolnieruck
 
 Ce blog a été réalisé dans le cadre d'un TP à l'INSA HdF à l'aide de Symfony.
 
+Veuillez changer la ligne 33 du fichier *.env* situé à la racine du projet afin d'y connecter vore propre base de données.
+
+Si vous souhaitez utiliser la même base de données que moi, executez le fichier install.sql dans votre SGDB.
+
 Version PHP : 7.2
 
 ## Ressources
